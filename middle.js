@@ -53,7 +53,7 @@ const middle = function (arr) {
   }
 }
 
-/// test code
+/// test code always
 
 middle([1]) // => []
 middle([1, 2]) // => []
