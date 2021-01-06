@@ -27,13 +27,16 @@ const countLetters = function(string){
           }
         }
     }
-}else{
+  }else{
     console.log('please feed a string');
     return
   }
+  return letterCount
   console.log(letterCount)
 }
 
-countLetters("LhL")
+let test = countLetters("LhL")
 countLetters("torero")
 countLetters(1)
+
+assertEqual(test['h'],1)
