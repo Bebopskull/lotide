@@ -42,3 +42,4 @@ console.log(results1);
 assertArraysEqual(map(words, word =>word[1]), ['r','o','o','a','o'])
 assertArraysEqual(map(words, word =>word.length), [6,7,2,5,3])
 assertArraysEqual(map(words, (word) =>word.length*3), [18,21,6,15,9])
+///end///
