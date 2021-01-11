@@ -18,22 +18,22 @@ const without = require('./without');
 const { find } = require('lodash');
 
 module.exports = {
-  assertArraysEqual : assertArraysEqual,
-  assertEqual : assertEqual,
-  assertObjectsEqual : assertObjectsEqual,
-  countOnly : countOnly,
-  countLetters : countLetters,
-  eqArrays : eqArrays,
-  eqObjects : eqObjects,
-  findKey : findKey,
-  findKeyByValue : findKeyByValue,
-  head : head,
-  tail : tail,
-  letterPositions : letterPositions,
-  map : map,
-  middle : middle,
-  takeUntil : takeUntil,
-  without : without
+  assertArraysEqual,
+  assertEqual,
+  assertObjectsEqual,
+  countOnly,
+  countLetters,
+  eqArrays,
+  eqObjects,
+  findKey,
+  findKeyByValue,
+  head,
+  tail,
+  letterPositions,
+  map,
+  middle,
+  takeUntil,
+  without
 };
 
 
