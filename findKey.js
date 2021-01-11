@@ -45,9 +45,10 @@ const findKey= function(obj, callback){
   // return v
 }
 
+module.export = findKey;
 
 ////test cases
-
+/*
 const l = findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
@@ -76,3 +77,4 @@ const n = findKey({
 assertEqual(l, 'noma')
 assertEqual(m, 'Blue Hill')
 assertEqual(n, 'Akaleri')
+*/

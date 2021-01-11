@@ -13,29 +13,12 @@ const without = function (arrA, arrB) {
   return newArr
 }
 
-const eqArrays = function (arrA, arrB) {
-  let value
-  for (let i = 0; i <= arrA.length; i++) {
-    if (arrA[i] === arrB[i]) {
-      value = true
-    } else {
-      value = false
-      return value
-    }
-  }
 
-  return value
-}
+module.exports = without;
 
-const assertArraysEqual = function (actual, expected) {
-  if (eqArrays(actual, expected) !== true) {
-    console.log('🤦🤦🤦 Assertion Failed: ' + actual + ' !== ' + expected)
-  } else {
-    console.log('😎😎😎 Assertion Passed: ' + actual + ' === ' + expected)
-  }
-}
-
+/*
 const words = ['hello', 'world', 'lighthouse']
 console.log(without(words, ['lighthouse'])) // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
 assertArraysEqual(words, ['hello', 'world', 'lighthouse'])
+*/

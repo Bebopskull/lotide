@@ -1,11 +1,5 @@
 // inhereited functions
-const assertEqual = function (actual, expected) {
-  if (actual !== expected) {
-    console.log('🤦🤦🤦 Assertion Failed: ' + actual + ' !== ' + expected)
-  } else {
-    console.log('😎😎😎 Assertion Passed: ' + actual + ' === ' + expected)
-  }
-}
+
 
 ///actual function
 
@@ -24,13 +18,13 @@ let findKeyByValue= function(Object, value){
   return v
 }
 
-
+module.export = findKeyByValue;
 
 
 
 ////assertion test (should write some more)
 
-
+/*
 const bestTVShowsByGenre = { 
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
@@ -49,3 +43,5 @@ const objectExemple = {
 
 assertEqual(findKeyByValue(objectExemple, 1), 'a');
 assertEqual(findKeyByValue(objectExemple, 4), undefined);
+
+*/

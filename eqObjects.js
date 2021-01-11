@@ -1,27 +1,8 @@
 // inhereited functions
 
-const assertEqual = function (actual, expected) {
-  if (actual !== expected) {
-    console.log('🤦🤦🤦 Assertion Failed: ' + actual + ' !== ' + expected)
-  } else {
-    console.log('😎😎😎 Assertion Passed: ' + actual + ' === ' + expected)
-  }
-}
+const assertEqual = require('./assertEqual');
 
-const eqArrays = function (arrA, arrB) {
-  let value
-
-  for (let i = 0; i <= arrA.length; i++) {
-    if (arrA[i] === arrB[i]) {
-      value = true
-    } else {
-      value = false
-      return value
-    }
-  }
-
-  return value
-}
+const eqArrays = require('./eqArrays');
 
 // /actual function/
 
@@ -60,9 +41,9 @@ const eqObjects = function(object1, object2) {
 
 };
 
+module.exports = eqObjects;
 
-
-
+/*
 ////test code
 
 const ab = { a: "1", b: "2" };
@@ -84,3 +65,4 @@ assertEqual(eqObjects(cd, dc),true); // => true
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
 assertEqual(eqObjects(cd, cd2), false); // => false
+*/

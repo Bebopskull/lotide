@@ -1,12 +1,8 @@
 // inhereited functions
 
-const assertEqual = function (actual, expected) {
-  if (actual !== expected) {
-    console.log('🤦🤦🤦 Assertion Failed: ' + actual + ' !== ' + expected)
-  } else {
-    console.log('😎😎😎 Assertion Passed: ' + actual + ' === ' + expected)
-  }
-}
+const { ModuleResolutionKind } = require('typescript');
+const assertEqual = require('./assertEqual');
+
 
 // actual function
 
@@ -35,8 +31,4 @@ const countLetters = function(string){
   console.log(letterCount)
 }
 
-let test = countLetters("LhL")
-countLetters("torero")
-countLetters(1)
-
-assertEqual(test['h'],1)
+ModuleResolutionKind.exports = countLetters;
