@@ -1,25 +1,6 @@
 // PRE FUNCTIONS///
-const eqArrays = function (arrA, arrB) {
-  let value
-  for (let i = 0; i <= arrA.length; i++) {
-    if (arrA[i] === arrB[i]) {
-      value = true
-    } else {
-      value = false
-      return value
-    }
-  }
-  return value
-}
-
-// eslint-disable-next-line no-unused-vars
-const assertArraysEqual = function (actual, expected) {
-  if (eqArrays(actual, expected) !== true) {
-    console.log('🤦🤦🤦 Assertion Failed: ' + actual + ' !== ' + expected)
-  } else {
-    console.log('😎😎😎 Assertion Passed: ' + actual + ' === ' + expected)
-  }
-}
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
 // ACTUAL FUNCTION///
 
@@ -53,13 +34,4 @@ const middle = function (arr) {
   }
 }
 
-/// test code always
-
-middle([1]) // => []
-middle([1, 2]) // => []
-// For arrays with odd number of elements, an array containing a single middle element should be returned.
-middle([1, 2, 3]) // => [2]
-middle([1, 2, 3, 4, 5]) // => [3]
-// For arrays with an even number of elements, an array containing the two elements in the middle should be returned
-middle([1, 2, 3, 4]) // => [2, 3]
-middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
+module.exports = middle;
