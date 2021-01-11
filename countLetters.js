@@ -1,9 +1,5 @@
 // inhereited functions
 
-const { ModuleResolutionKind } = require('typescript');
-const assertEqual = require('./assertEqual');
-
-
 // actual function
 
 const countLetters = function(string){
@@ -31,4 +27,4 @@ const countLetters = function(string){
   console.log(letterCount)
 }
 
-ModuleResolutionKind.exports = countLetters;
+module.exports = countLetters;

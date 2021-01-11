@@ -18,7 +18,7 @@ let findKeyByValue= function(Object, value){
   return v
 }
 
-module.export = findKeyByValue;
+module.exports = findKeyByValue;
 
 
 
