@@ -1,17 +1,5 @@
 /* eslint-disable no-unused-vars */
-const eqArrays = function (arrA, arrB) {
-  let value
-  for (let i = 0; i <= arrA.length; i++) {
-    if (arrA[i] === arrB[i]) {
-      value = true
-    } else {
-      value = false
-      return value
-    }
-  }
-
-  return value
-}
+const eqArrays = require('./eqArrays')
 
 const assertArraysEqual = function (actual, expected) {
   if (eqArrays(actual, expected) !== true) {
@@ -21,5 +9,5 @@ const assertArraysEqual = function (actual, expected) {
   }
 }
 
-console.log(assertArraysEqual([1,2,3],[1,2,3]))
-console.log(assertArraysEqual([1,2,3],[1,2,'3']))
+
+module.exports = assertArraysEqual;
