@@ -1,20 +1,25 @@
 ///imports
-const assertEqual = require('../assertEqual');
+
 const tail = require('../tail');
+const assert = require('chai').assert;
 
 
 /////tests
 
+describe('#tail', ()=>{
+  it('Ensure we get back 2 elements',()=>{
+    let result = tail(["Hello", "Lighthouse", "Labs"]);
+    assert.strictEqual(result.length, 2);
+  })
+  it('ensure first element is "Lighthouse"',()=>{
+    let result = tail(["Hello", "Lighthouse", "Labs"]);
+    assert.strictEqual(result[0], "Lighthouse");
+  })
+  it('ensure last element is "Labs"',()=>{
+    let result = tail(["Hello", "Lighthouse", "Labs"]);
+    assert.strictEqual(result[1], "Labs");
+  })
+});
 
-let result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail!
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3);
 
-// Test Case 1: Check the returned array elements
-result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2); // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs"); // ensure second element is "Labs"
